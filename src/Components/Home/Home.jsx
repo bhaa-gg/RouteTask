@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import Loading from './../Loading/Loading';
-import { getAllCustomers, getAllTransactions } from '../../Redux/customers-slice';
+import { getAllTransactions } from '../../Redux/customers-slice';
 import Customers from '../Customers/Customers';
 import Chart from './../Chart/Chart';
 
@@ -10,7 +10,6 @@ const Home = () => {
     const dispatch = useDispatch()
 
     const getCustomerAndTransaction = async () => {
-        dispatch(getAllCustomers())
         dispatch(getAllTransactions())
     }
 
